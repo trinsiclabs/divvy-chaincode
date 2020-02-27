@@ -9,7 +9,8 @@
   "engineStrict": true,
   "main": "index.js",
   "scripts": {
-    "start": "fabric-chaincode-node start"
+    "start": "fabric-chaincode-node start",
+    "dev": "fabric-chaincode-node start --peer.address peer:7052 --chaincode-id-name 'mycc:0'"
   },
   "dependencies": {
     "fabric-contract-api": "^1.4.0",
