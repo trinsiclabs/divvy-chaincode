@@ -81,6 +81,28 @@ class ShareContract extends Contract {
 
     return share;
   }
+
+  /**
+   * Get all shares owned by an org.
+   *
+   * @param {Object} ctx
+   * @param {String} ownerOrg
+   *
+   * @return {Array}
+   */
+  async queryAllShares(ctx, issuer, owner) {
+    let results = [];
+
+    for (let i = 1; i < 101; i += 1) {
+      const share = await this.queryShare(ctx, issuer, i);
+
+      if (share.owner === owner) {
+        results.push(share);
+      }
+    }
+
+    return results;
+  }
 }
 
 module.exports = ShareContract;
