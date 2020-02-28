@@ -37,12 +37,12 @@ Start the dev network:
 
 ```
 $ cd /home/vagrant/chaincode
-$ sudo docker-compose -f ./dev/docker-compose.yaml up
+$ sudo docker-compose -f ./dev/docker-compose.yaml up -d
 ```
 
 ### Start the chaincode
 
-Open a new terminal window and log into the chaincode container:
+Log into the chaincode container:
 
 ```
 $ sudo docker exec -it chaincode sh
@@ -77,6 +77,18 @@ Install and instantiate the chaincode:
 ```
 $ peer chaincode install -p ./chaincode -n mycc -v 0 -l node
 $ peer chaincode instantiate -n mycc -v 0 -c '{"Args":[]}' -C myc
+```
+
+Invoke the initial transaction:
+
+```
+$ peer chaincode invoke -n mycc -c '{"Args":["com.divvy.share:instantiate","myorg"]}' -C myc
+```
+
+Query the ledger:
+
+```
+$ peer chaincode query -n mycc -c '{"Args":["queryShare","myorg","1"]}' -C myc
 ```
 
 ### Making changes
