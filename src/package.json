@@ -13,7 +13,7 @@
     "dev": "fabric-chaincode-node start --peer.address peer:7052 --chaincode-id-name 'mycc:0'"
   },
   "dependencies": {
-    "fabric-contract-api": "^1.4.0",
-    "fabric-shim": "^1.4.0"
+    "fabric-contract-api": "^1.4.5",
+    "fabric-shim": "^1.4.5"
   }
 }
