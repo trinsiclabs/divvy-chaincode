@@ -1,7 +1,17 @@
 {
   "name": "chaincode",
   "version": "1.0.0",
-  "description": "",
+  "description": "Chaincode is used to update and query Divvy state.",
+  "homepage": "https://github.com/trinsiclabs/divvy-chaincode#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trinsiclabs/divvy-chaincode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trinsiclabs/divvy-chaincode/issues",
+    "email": "david@davidcraig.co.nz"
+  },
+  "license": "BSD-3-Clause",
   "engines": {
     "node": ">=8.4.0",
     "npm": ">=5.3.0"

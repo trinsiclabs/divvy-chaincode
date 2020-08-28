@@ -5,7 +5,7 @@ Chaincode is used to update and query ledger state.
 ## Getting started
 
 Make sure you have set up the host VM as described in the
-[platform docs](https://github.com/flashbackzoo/divvy).
+[platform docs](https://github.com/trinsiclabs/divvy).
 
 Normally chaincodes are started and maintained by peers. However in "dev mode",
 chaincode is built and started by the user. This mode is useful during
